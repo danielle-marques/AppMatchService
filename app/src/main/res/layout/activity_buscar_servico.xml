@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    tools:context=".BuscarServicoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/ivVoltarBuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginHorizontal="14dp"
+                android:src="@drawable/left"
+                android:backgroundTint="@color/yellow"/>
+
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="28dp"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal">
+
+                <Spinner
+                    android:id="@+id/spnBuscarServico"
+                    android:layout_width="270dp"
+                    android:layout_height="45dp"
+                    android:background="@color/black"
+                    android:backgroundTintMode="src_over"
+                    android:popupBackground="@color/black"
+                    android:popupElevation="2dp" />
+
+                <ImageButton
+                    android:id="@+id/ivPesquisar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black"
+                    android:popupElevation="2dp"
+                    android:src="@drawable/search" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBuscarServico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                tools:listitem="@layout/item_lista_servico" />
+            <TextView
+                android:id="@+id/tvSemServico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Não possui serviço cadastrado"
+                android:visibility="invisible"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textSize="22sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
